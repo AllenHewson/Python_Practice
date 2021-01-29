@@ -18,5 +18,7 @@ source = driver.find_element_by_xpath('//*[@id="box3"]')
 destination = driver.find_element_by_xpath('//*[@id="box103"]')
 # Using the action chains library, more complex tasks like drag and dropping can be performed.
 actions = ActionChains(driver)
-# When methonds are called for actions on an actionschain, they are stored in a queue 
+# When methonds are called for actions on an actionschain, they are stored in a queue
 # Call the drag and drop function on the actions object
+actions.drag_and_drop(source, destination).perform()
+# To execute actions on the action object, call perform
